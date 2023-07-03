@@ -13,8 +13,8 @@ del mio codice HTML.*/
 let numberOfkilometers = parseInt(prompt("quanti kilometri voresti percorrere?"));
 let userAge = prompt("inserisci la tua età: ")
 
-console.log("Tu vorresti percorrere:" + numberOfkilometers);
-console.log("Tu hai:" + userAge);
+console.log("Tu vorresti percorrere:" + numberOfkilometers + "km");
+console.log("Tu hai:" + userAge + "anni");
 
 //calcolo del prezzo totale del viaggio
 const priceAtkilometer = 0.21
@@ -25,22 +25,22 @@ let totalTicketPrice;
 //applicazione degli sconti
 if (userAge <= 21) {
 
-    let discount1 = (ticketPrice *20)/100;
+    let discount1 = (ticketPrice * 20) / 100;
     console.log("Avrai uno sconto di: " + discount1.toFixed(2) + "€");
     totalTicketPrice = ticketPrice - (discount1.toFixed(2));
-    console.log  ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
+    console.log("il prezzo finale è: " + totalTicketPrice.toFixed(2) +"€");
 }
 else if (userAge >= 65) {
 
-    let discount2 =(ticketPrice *40)/100;
+    let discount2 = (ticketPrice * 40) / 100;
 
     console.log("Avrai uno sconto di: " + discount2.toFixed(2) + "€");
     totalTicketPrice = ticketPrice - (discount2.toFixed(2));
-    console.log ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
+    console.log("il prezzo finale è: " + totalTicketPrice.toFixed(2)+"€");
 } else {
     console.log("Avrai uno sconto di: " + 0 + "€");
-     totalTicketPrice = ticketPrice;
-    console.log ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
+    totalTicketPrice = ticketPrice;
+    console.log("il prezzo finale è: " + totalTicketPrice.toFixed(2)+ "€");
 }
 
-//div.innerHTML += "<p> il costo totale del biglietto è : </p>";
+document.getElementById("ticket").innerHTML = " il prezzo totale  è: " + totalTicketPrice.toFixed(2) + "€";
