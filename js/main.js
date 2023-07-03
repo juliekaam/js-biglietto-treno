@@ -21,24 +21,26 @@ const priceAtkilometer = 0.21
 let ticketPrice = numberOfkilometers * priceAtkilometer;
 
 console.log("Il tuo biglietto costa: " + ticketPrice + "€");
-
+let totalTicketPrice;
 //applicazione degli sconti
 if (userAge <= 21) {
 
-    let discount1 = ticketPrice - (20 % ticketPrice);
+    let discount1 = (ticketPrice *20)/100;
     console.log("Avrai uno sconto di: " + discount1.toFixed(2) + "€");
-    let totalTicketPrice = ticketPrice - discount1;
-    console.log = ("il prezzo finale è: " + totalTicketPrice);
+    totalTicketPrice = ticketPrice - (discount1.toFixed(2));
+    console.log  ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
 }
 else if (userAge >= 65) {
 
-    let discount2 = ticketPrice - (40 % ticketPrice);
+    let discount2 =(ticketPrice *40)/100;
 
     console.log("Avrai uno sconto di: " + discount2.toFixed(2) + "€");
-    let totalTicketPrice = ticketPrice - discount2;
-    console.log = ("il prezzo finale è: " + totalTicketPrice);
+    totalTicketPrice = ticketPrice - (discount2.toFixed(2));
+    console.log ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
 } else {
-    let totalTicketPrice = ticketPrice;
+    console.log("Avrai uno sconto di: " + 0 + "€");
+     totalTicketPrice = ticketPrice;
+    console.log ("il prezzo finale è: " + totalTicketPrice.toFixed(2));
 }
 
-
+//div.innerHTML += "<p> il costo totale del biglietto è : </p>";
