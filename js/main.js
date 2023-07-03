@@ -27,7 +27,7 @@ if (userAge <= 21) {
 
     let discount1 = ticketPrice - (20 % ticketPrice);
     console.log("Avrai uno sconto di: " + discount1.toFixed(2) + "€");
-    let totalTicketPrice = ticketPrice - discount;
+    let totalTicketPrice = ticketPrice - discount1;
     console.log = ("il prezzo finale è: " + totalTicketPrice);
 }
 else if (userAge >= 65) {
@@ -37,8 +37,8 @@ else if (userAge >= 65) {
     console.log("Avrai uno sconto di: " + discount2.toFixed(2) + "€");
     let totalTicketPrice = ticketPrice - discount2;
     console.log = ("il prezzo finale è: " + totalTicketPrice);
-}else{
-    let totalTicketPrice=ticketPrice;
+} else {
+    let totalTicketPrice = ticketPrice;
 }
 
 
