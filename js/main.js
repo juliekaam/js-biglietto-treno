@@ -10,10 +10,14 @@ Il risultato andrà visualizzato prima in console e poi possibilmente in un appo
 del mio codice HTML.*/
 
 //acquisizione di informazione dell'utente
-let numberOfkilometers= prompt("quanti kilometri voresti percorrere?");
+let numberOfkilometers= parseInt(prompt("quanti kilometri voresti percorrere?"));
 let userAge= prompt("inserisci la tua età: ")
 
 console.log( "Tu vorresti percorrere:" +numberOfkilometers);
 console.log( "Tu hai:" +userAge);
 
 //calcolo del prezzo totale del viaggio
+const priceAtkilometer=0.21
+let ticketPrice= numberOfkilometers *priceAtkilometer;
+
+console.log("Il tuo biglietto costa: "+ticketPrice+"€");
